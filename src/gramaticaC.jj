@@ -1,0 +1,606 @@
+/**
+ * JavaCC template file created by SF JavaCC plugin 1.5.28+ wizard for JavaCC 1.5.0+
+ * Dupla: Carlos Eduardo
+ 		  Daniele Ventura
+
+ 	 Gramatica da Linguagem C
+ */options{  static = true;}PARSER_BEGIN(LinguagemC)
+import java.util.*;
+import java.io.*;
+public class LinguagemC{  public static void main(String args []) throws ParseException, IOException, Exception  {
+     LinguagemC parser = new LinguagemC(new FileInputStream("codigo.txt"));
+    try
+    {
+      LinguagemC.inicio();
+    }
+    catch (ParseException e)
+    {
+      System.out.println("Erros foram encontrados. " + e);
+    }    }  }PARSER_END(LinguagemC)SKIP : {	  " "	| "\r"	| "\t"	| "\n"}
+TOKEN: //PALAVRAS RESERVADAS
+{
+  < AUTO : "auto" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < MAIN : "main" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < STRUCT : "struct" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < BREACK : "break" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < ELSE : "else" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < SWITCH : "switch" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < ENDERECO_VARIAVEL : "&" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < CASE : "case" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < REGISTER : "register" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < TYPEDEF : "typedef" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < EXTERN : "extern" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < RETURN : "return" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < UNION : "union" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < CONST : "const" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < LONG : "long" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < ENUM : "enum" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < SHORT : "short" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < UNSIGNED : "unsigned" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < CONTINUE : "continue" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < FOR : "for" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < SIGNED : "signed" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < VOID : "void" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < GOTO : "goto" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < SIZEOF : "sizeof" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < VOLATILE : "volatile" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < DO : "do" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < IF : "if" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < STATIC : "static" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < WHILE : "while" >
+  {
+     System.out.println("\nPalavra Reservada: " + image);
+  }
+  | < PRINTF : "printf" >
+  {
+    System.out.println("\nPalavra Reservada: " + image);
+  }
+| < SCANF : "scanf" >
+  {
+    System.out.println("\nPalavra Reservada: " + image);
+  }
+}
+TOKEN : // OPERADORES ARITM�TICOS{  < SOMA : "+" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }  | < SUBTRACAO : "-" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }  | < MULTIPLICACAO : "*" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }  | < DIVISAO : "/" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }
+  | < RESTO_DIVISAO : "%" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }
+  | < INCREMENTO : "++" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }
+  | < DECREMENTO : "--" >
+  {
+     System.out.println("\nOperador Aritmetico: " + image);
+  }}
+
+TOKEN : // OPERADORES DE ATRIBUICAO
+{
+   < ATRIBUICAO : "=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+  | < DIVISAO_IGUAL : "/=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+  | < SOMA_IGUAL: "+=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+  | < SUBTRACAO_IGUAL: "-=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+  | < MULTIPLICACAO_IGUAL: "*=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+  | < RESTO_IGUAL: "%=" >
+  {
+     System.out.println("\nOperador de atribuicao: " + image);
+  }
+}
+
+TOKEN : //OPERADORES RELACIONAIS
+{
+   < IGUAL : "==" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+  | < DIFERENCA : "!=" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+  | < MAIOR_Q: ">" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+  | < MENOR_Q: "<" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+  | < MAIOR_IGUAL: ">=" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+  | < MENOR_IGUAL: "<=" >
+  {
+     System.out.println("\nOperador relacional: " + image);
+  }
+}
+
+TOKEN : // TIPOS PRIMITIVOS DE DADOS 
+{
+  < INT : "int" >
+  {
+    System.out.println("\nTipo de dado: " + image);
+  }
+  | < CHAR : "char" >
+  {
+    System.out.println("\nTipo de dado: " + image);
+  }
+  | < FLOAT : "float" >
+  {
+    System.out.println("\nTipo de dado: " + image);
+  }
+  | < DOUBLE : "double" >
+  {
+    System.out.println("\nTipo de dado: " + image);
+  }
+}
+
+TOKEN : //OPERADORES LOGICOS
+{
+  < AND : "&&" >
+  {
+    System.out.println("\nOperador logico: " + image);
+  }
+  | < OR : "||" >
+  {
+    System.out.println("\nOperador logico: " + image);
+  }
+  | < NEGACAO : "!" >
+  {
+    System.out.println("\nOperador logico: " + image);
+  }
+}
+TOKEN: //DELIMITADORES
+{
+  < PONTO_VIRGULA: ";" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < VIRGULA: "," >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < ASPAS_SIMPLES: "'" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < ASPAS_DUPLAS: "\"" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < PONTO: "." >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < ABRE_CHAVE: "{" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < FECHA_CHAVE: "}" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < ABRE_PARENTESE: "(" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < FECHA_PARENTESE: ")" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < ABRE_COLCHETE: "[" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+  | < FECHA_COLCHETE: "]" >
+  {
+    System.out.println("\nDelimitador: " + image);
+  }
+}
+
+TOKEN :  //IDENTIFICADOR 
+{
+  <IDENTIFICADOR: (< LETRA >)( < LETRA > | < NUMERO > )* >
+   {
+    System.out.println("Identificador: " + image);
+  }
+ |<ATR_INT: (< NUMERO> )+ >
+   {
+    System.out.println("Identificador Inteiro: " + image);
+  }
+ |<ATR_REAL: (< NUMERO >)+ "." (< NUMERO >)+ >
+   {
+    System.out.println("Identificador Real: " + image);
+  }  
+ | < #LETRA: (["a"-"z", "_","A"-"Z"]) >
+ | < #NUMERO: ["0"-"9"] >
+}
+
+
+void inicio():
+{}
+{
+    Programa()
+  < EOF >
+  {
+    System.out.print("\nGRAMATICA ACEITA\n");
+  }
+}
+
+void Programa():
+{}
+{
+  (BibliotecaDeclaracao())+
+  (FuncaoDeclaracao())*
+  Main()
+}
+
+void BibliotecaDeclaracao():
+{}
+{
+  "#include" "<" (< IDENTIFICADOR > "." < IDENTIFICADOR >) ">"
+}
+
+void FuncaoDeclaracao():
+{}
+{
+  (<VOID> | TipoDeDados()) <IDENTIFICADOR > "(" [ListaDeParametros()] ")" "{" [CorpoDaDeclaracao()] "}"    
+} 
+
+void Main() :
+{}
+{
+   (     "void main(int argc, char *argv[])"
+   | "void main()"
+   | "void main(void)"
+   | "int main(int argc, char *argv[])"
+   | "int main()"
+   | "int main(void)" )
+    BlocoDeDeclaracoes()
+}
+void TipoDeDados():
+{}
+{
+    (
+     < CHAR >
+    | < INT >
+    | < FLOAT >
+    | < DOUBLE >
+     )   
+}
+
+void DeclaracaoVariavel():
+{}
+{
+    (
+	      < CHAR > <IDENTIFICADOR > (","<IDENTIFICADOR >)* ["=" "'" < IDENTIFICADOR >"'"]";"
+	    | < INT > <IDENTIFICADOR > (","<IDENTIFICADOR >)* [ "=" < ATR_INT >] ";"
+	    | < FLOAT > <IDENTIFICADOR > (","<IDENTIFICADOR >)* [ "="  < ATR_REAL >]";"
+	    | < DOUBLE > <IDENTIFICADOR > (","<IDENTIFICADOR >)* [ "="  < ATR_REAL >] ";"
+     )
+}
+
+void ListaDeParametros():
+{}
+{
+  Parametro() ("," Parametro())*
+}
+
+void Parametro():
+{}
+{
+  TipoDeDados() < IDENTIFICADOR >
+}
+
+void ChamadaDeFuncao():
+{}
+{
+  < IDENTIFICADOR > "("(< IDENTIFICADOR >("," < IDENTIFICADOR >)*)?")"";"
+}
+  
+void CorpoDaDeclaracao():
+{}
+{
+  	 (  	    DeclaracaoVariavel()
+      |LOOKAHEAD(3)
+       ChamadaDeFuncao()     
+  	  |LOOKAHEAD(3)
+  	   ExpressaoMaisAtribuicao()
+  	  |LOOKAHEAD(3)
+  	   AtribuicaoSimples()";"
+      | If_Else()
+	  | While()
+	  | For()
+	  | Printf()
+	  | Scanf()
+	  | < RETURN > TiposRetorno()";"
+	  )
+}
+
+void TiposRetorno():
+{}
+{
+    <IDENTIFICADOR >
+    | < ATR_INT >
+    | < ATR_REAL >
+    |"("(<IDENTIFICADOR >|< ATR_INT >| < ATR_REAL >)")"
+}
+
+void AtribuicaoSimples():
+{}
+{
+	< IDENTIFICADOR >"="
+	(
+	  (
+	    (< ATR_INT >|< ATR_REAL >)
+	    (
+	      ("+"|"-"|"*"|"%"|"/")
+          (< ATR_INT >|< ATR_REAL >)
+        )*
+	  )
+	  |("'" < IDENTIFICADOR >"'")
+    )
+}
+
+void OperacoesNumeros():
+{}
+{
+  (     (< ATR_INT >|< ATR_REAL >)
+     ("+"|"-"|"*"|"%"|"/"|ExpressaoRelacional())
+     (< ATR_INT >|< ATR_REAL >)
+    )
+}
+  
+void ExpressaoMaisAtribuicao():
+{}
+{
+  (<IDENTIFICADOR >("-="|"/="|"*="|"%=")(< ATR_INT >|< ATR_REAL >))";"
+}
+
+void If_Else():
+{}
+{
+   < IF > "("(Expressao())+")" BlocoDeDeclaracoes()[ < ELSE > BlocoDeDeclaracoes()]
+}
+
+void While() :
+{}
+{
+  < WHILE > "(" Expressao() ")" BlocoDeDeclaracoes()
+}
+
+void For() :
+{}
+{
+  < FOR > "(" ([< INT >]<IDENTIFICADOR> "=" < ATR_INT >)
+            ";"(<IDENTIFICADOR>("<"| ">"|"<="|">=")< ATR_INT >)
+            ";" (<IDENTIFICADOR>("++"|"--"))")"
+            BlocoDeDeclaracoes()
+}
+
+void Printf() :
+{}
+{
+  < PRINTF > "(" "\"" < IDENTIFICADOR > "\"" ("," < IDENTIFICADOR >)* ")" ";"
+}
+
+void Scanf() :
+{}
+{
+  < SCANF > "(" "\"" < IDENTIFICADOR >"\"" ("," "&" < IDENTIFICADOR >)* ")" ";"
+}
+
+void BlocoDeDeclaracoes() :
+{}
+{
+  "{"
+	  (CorpoDaDeclaracao())*
+  "}"
+}
+
+void Expressao():
+{}
+{
+	  [ < NEGACAO > ]
+  (
+    (
+      < IDENTIFICADOR >
+      [
+        ChamadaDeFuncao()
+        < INCREMENTO >
+      | < DECREMENTO >
+      ]
+    | (< ATR_INT >|< ATR_REAL >)
+    )
+    [
+	      Atribuicao()
+	    | ExpressaoLogica()
+	    | ExpressaoRelacional()
+	    | ExpressaoNumerica()
+	    | ExpressaoVariaveis()
+		| OperacoesNumeros()
+    ]
+  | "(" Expressao() ")"
+  )
+}
+
+void Atribuicao() :
+{}
+{
+  "=" Expressao()
+}
+
+void ExpressaoVariaveis():
+{}
+{
+  (      (
+        < IDENTIFICADOR >
+      )
+    [
+	    (
+		     ExpressaoRelacional()
+		    | ExpressaoNumerica()
+	  	)
+	  	(
+		    LOOKAHEAD(< ATR_INT >)
+		 	< ATR_INT >
+		  | LOOKAHEAD(< ATR_REAL >)
+		 	< ATR_REAL > 
+	    )
+    ]
+  )
+} 
+
+void ExpressaoNumerica():
+{}
+{
+   (
+	     "+"
+	   | "+="
+	   | "-="
+	   | "-"
+	   | "/="
+	   | "/"
+	   | "*"
+	   | "*="
+	   | "%"
+	   | "%="
+   )
+   Expressao()
+}
+
+void ExpressaoRelacional():
+{}
+{
+   (
+	     "<"
+	   | ">"
+	   | "<="
+	   | ">="
+	   | "=="
+	   | "!="
+   )
+  Expressao()
+}
+
+void ExpressaoLogica():
+{}
+{
+   (
+     "!"
+   | "&&"
+   | "||"   )
+   Expressao()
+}
+
