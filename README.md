@@ -1,8 +1,7 @@
 # compiladorC
 
-Projeto desenvolvido para a cadeira de Compiladores da UEPB 2021.
-
-Utilizado o JavaCC
+Projeto desenvolvido para a cadeira de Compiladores da UEPB - 2021.1.
+Compilador para linguagem C utilizando o JavaCC.
 
 Escopo do projeto: 
 - Tipos básicos: string, números (inteiro e real)
